@@ -79,7 +79,7 @@ export default class extends Vue {
   private resv = {
     resvtype :2,
     custname :'',
-    location:''
+    model:''
   }
   created() {
     this.init()
@@ -128,7 +128,7 @@ export default class extends Vue {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        this.resv.location = location
+        this.resv.model = location
         const params = {
           ...this.resv,
         }

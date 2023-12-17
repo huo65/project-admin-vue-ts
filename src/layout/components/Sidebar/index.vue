@@ -1,26 +1,27 @@
 <template>
   <div>
-    <div class="logo">
-      <!-- <img
-        src="./../../../assets/logo.png"
-        width="122.5"
-        alt=""
-      > -->
-      <!-- <img
-        src="@/assets/login/login-logo.png"
-        alt=""
-        style="width: 120px; height: 31px"
-      /> -->
-      <div v-if="!isCollapse"
-           class="sidebar-logo">
-        <img src="@/assets/login/logo.png"
-             style="width: 120px; height: 31px">
-      </div>
-      <div v-else
-           class="sidebar-logo-mini">
-        <img src="@/assets/login/mini-logo.png">
-      </div>
-    </div>
+<!--    <div class="logo">-->
+<!--&lt;!&ndash;      管理端&ndash;&gt;-->
+<!--      &lt;!&ndash; <img-->
+<!--        src="./../../../assets/logo.png"-->
+<!--        width="122.5"-->
+<!--        alt=""-->
+<!--      > &ndash;&gt;-->
+<!--      &lt;!&ndash; <img-->
+<!--        src="@/assets/login/login-logo.png"-->
+<!--        alt=""-->
+<!--        style="width: 120px; height: 31px"-->
+<!--      /> &ndash;&gt;-->
+<!--&lt;!&ndash;      <div v-if="!isCollapse"&ndash;&gt;-->
+<!--&lt;!&ndash;           class="sidebar-logo">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="@/assets/login/logo.png"&ndash;&gt;-->
+<!--&lt;!&ndash;             style="width: 120px; height: 31px">&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div v-else&ndash;&gt;-->
+<!--&lt;!&ndash;           class="sidebar-logo-mini">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="@/assets/login/mini-logo.png">&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu :default-openeds="defOpen"
                :default-active="defAct"
@@ -135,7 +136,7 @@ export default class extends Vue {
 <style lang="scss" scoped>
 .logo {
   text-align: center;
-  background-color: #ffc100;
+  background-color: #343744;
   padding: 15px 0 0;
   height: 60px;
   img {

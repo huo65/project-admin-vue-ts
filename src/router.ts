@@ -14,12 +14,6 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/login",
-      component: () =>
-        import(/* webpackChunkName: "login" */ "@/views/login/index.vue"),
-      meta: { title: "去这儿旅行", hidden: true, notNeedAuth: true }
-    },
-    {
       path: "/404",
       component: () => import(/* webpackChunkName: "404" */ "@/views/404.vue"),
       meta: { title: "去这儿旅行", hidden: true, notNeedAuth: true }
@@ -40,22 +34,22 @@ const router = new Router({
             affix: true
           }
         },
-		{
-          path: "/statistics",
-          component: () =>
-            import(/* webpackChunkName: "shopTable" */ "@/views/statistics/index.vue"),
-          meta: {
-            title: "数据统计",
-            icon: "icon-statistics"
-          }
-        },
+		// {
+    //       path: "/statistics",
+    //       component: () =>
+    //         import(/* webpackChunkName: "shopTable" */ "@/views/statistics/index.vue"),
+    //       meta: {
+    //         title: "数据统计",
+    //         icon: "icon-statistics"
+    //       }
+    //     },
         {
           path: "bus",
           component: () =>
             import(/* webpackChunkName: "shopTable" */ "@/views/bus/index.vue"),
           meta: {
             title: "大巴管理",
-            icon: "icon-employee"
+            icon: ""
           }
         },
         {
@@ -73,7 +67,7 @@ const router = new Router({
             import(/* webpackChunkName: "shopTable" */ "@/views/flights/index.vue"),
           meta: {
             title: "航班管理",
-            icon: "icon-employee"
+            icon: ""
           }
         },
         {
@@ -91,7 +85,7 @@ const router = new Router({
             import(/* webpackChunkName: "shopTable" */ "@/views/hotels/index.vue"),
           meta: {
             title: "酒店管理",
-            icon: "icon-employee"
+            icon: ""
           }
         },
         {
@@ -99,7 +93,7 @@ const router = new Router({
           component: () =>
             import(/* webpackChunkName: "dashboard" */ "@/views/hotels/addHotels.vue"),
           meta: {
-            title: "添加酒店",
+            title: "",
             hidden: true
           }
         },

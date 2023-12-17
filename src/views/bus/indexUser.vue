@@ -29,7 +29,7 @@
             <el-button type="text"
                        size="small"
                        class="blueBug"
-                       @click="addReservations()"
+                       @click="addReservations(scope.row.location)"
             >
               预订
             </el-button>
@@ -78,7 +78,8 @@ export default class extends Vue {
   private isSearch: boolean = false
   private resv = {
     resvtype :3,
-    custname :''
+    custname :'',
+    location:''
   }
   created() {
     this.init()
@@ -116,7 +117,7 @@ export default class extends Vue {
         this.$message.error('请求出错了：' + err.message)
       })
   }
-  private addReservations(){
+  private addReservations(location : string){
     this.resv.custname = this.name;
     if (this.name == ''){
       this.$message.error('请先登录')
@@ -126,6 +127,7 @@ export default class extends Vue {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
+        this.resv.location = location
         const params = {
           ...this.resv,
         }

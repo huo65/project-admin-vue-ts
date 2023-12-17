@@ -15,7 +15,7 @@
         :data="tableData" stripezz
         class="tableBox"
       >
-        <el-table-column prop="flightnum" label="航班号" />
+        <el-table-column prop="flightnum" label="航班号"  />
         <el-table-column prop="fromcity" label="起点" />
         <el-table-column prop="arivcity" label="终点" />
         <el-table-column prop="price" label="票价" />
@@ -30,7 +30,7 @@
             <el-button type="text"
                        size="small"
                        class="blueBug"
-                       @click="addReservations()"
+                       @click="addReservations(scope.row.flightnum)"
             >
               预约
             </el-button>
@@ -80,7 +80,8 @@ export default class extends Vue {
   private name: string = ''
   private resv = {
     resvtype :1,
-    custname :''
+    custname :'',
+    model:''
   }
 
   created() {
@@ -120,7 +121,7 @@ export default class extends Vue {
       })
   }
 
-  private addReservations(){
+  private addReservations(flightnum : string){
     this.resv.custname = this.name;
     if (this.name == ''){
       this.$message.error('请先登录')
@@ -130,6 +131,7 @@ export default class extends Vue {
       cancelButtonText: '取消',
       type: 'warning'
     }).then(() => {
+      this.resv.model = flightnum
       const params = {
         ...this.resv,
       }

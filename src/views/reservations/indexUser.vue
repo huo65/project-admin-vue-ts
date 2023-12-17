@@ -51,7 +51,10 @@
               {{ scope.row.resvtype === 1 ? '航班' : scope.row.resvtype === 2 ? '大巴' : scope.row.resvtype === 3 ? '酒店' : '' }}
             </span>
           </template>
-        </el-table-column><
+        </el-table-column>
+        <el-table-column prop="model"
+                         label="预订型号"
+        />
 
         <el-table-column label="操作"
                          width="200"

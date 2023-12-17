@@ -1,46 +1,55 @@
 <template>
   <div class="addBrand-container">
     <HeadLable :title="title"
-               :goback="true" />
+               :goback="true"
+    />
     <div class="container">
       <el-form ref="ruleForm"
                :model="ruleForm"
                :inline="false"
                label-width="180px"
-               class="demo-ruleForm">
-
+               class="demo-ruleForm"
+      >
         <el-form-item label="航班号:"
-                      prop="flightnum">
+                      prop="flightnum"
+        >
           <el-input v-model="ruleForm.flightnum"
                     placeholder="位置"
-                    maxlength="20" />
+                    maxlength="20"
+          />
         </el-form-item>
         <el-form-item label="起点:"
-                      prop="fromcity">
+                      prop="fromcity"
+        >
           <el-input v-model="ruleForm.fromcity"
                     placeholder="请输入起点"
-                    maxlength="12" />
+                    maxlength="12"
+          />
         </el-form-item>
         <el-form-item label="终点:"
-                      prop="arivcity">
+                      prop="arivcity"
+        >
           <el-input v-model="ruleForm.arivcity"
                     placeholder="请输入终点"
-                    maxlength="11" />
+                    maxlength="11"
+          />
         </el-form-item>
         <el-form-item label="票价:"
-                      prop="price">
+                      prop="price"
+        >
           <el-input v-model="ruleForm.price"
                     placeholder="请输入票价"
-                    maxlength="12" />
+                    maxlength="12"
+          />
         </el-form-item>
         <el-form-item label="座位数:"
-                      prop="numseats">
+                      prop="numseats"
+        >
           <el-input v-model="ruleForm.numseats"
                     placeholder="请输入座位数"
-                    maxlength="12" />
+                    maxlength="12"
+          />
         </el-form-item>
-
-
 
         <div class="subBox address">
           <!-- <el-form-item> -->
@@ -49,12 +58,14 @@
           </el-button>
           <el-button type="primary"
                      :class="{ continue: actionType === 'add' }"
-                     @click="submitForm('ruleForm', false)">
+                     @click="submitForm('ruleForm', false)"
+          >
             保存
           </el-button>
           <el-button v-if="actionType == 'add'"
                      type="primary"
-                     @click="submitForm('ruleForm', true)">
+                     @click="submitForm('ruleForm', true)"
+          >
             保存并继续添加
           </el-button>
           <!-- </el-form-item> -->
@@ -86,7 +97,6 @@ export default class extends Vue {
     price: '',
     numseats:''
   }
-
 
   created() {
     this.actionType = this.$route.query.id ? 'edit' : 'add'

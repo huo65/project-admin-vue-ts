@@ -1,7 +1,9 @@
 <template>
-  <div class="huo"> <h1 class="title">去这儿旅行管理端</h1>
+  <div class="huo">
+    <h1 class="title">
+      去这儿旅行管理端
+    </h1>
   </div>
-
 </template>
 
 <script lang="ts">
@@ -16,7 +18,8 @@ export default class extends Vue {
 
   created() {
 
-  }}
+  }
+}
 
 </script>
 

@@ -1,31 +1,38 @@
 <template>
   <div class="addBrand-container">
     <HeadLable :title="title"
-               :goback="true" />
+               :goback="true"
+    />
     <div class="container">
       <el-form ref="ruleForm"
                :model="ruleForm"
                :inline="false"
                label-width="180px"
-               class="demo-ruleForm">
-
+               class="demo-ruleForm"
+      >
         <el-form-item label="位置:"
-                      prop="location">
+                      prop="location"
+        >
           <el-input v-model="ruleForm.location"
                     placeholder="位置"
-                    maxlength="20" />
+                    maxlength="20"
+          />
         </el-form-item>
         <el-form-item label="价格/晚:"
-                      prop="price">
+                      prop="price"
+        >
           <el-input v-model="ruleForm.price"
                     placeholder="请输入房价"
-                    maxlength="12" />
+                    maxlength="12"
+          />
         </el-form-item>
         <el-form-item label="房间总数:"
-                      prop="numrooms">
+                      prop="numrooms"
+        >
           <el-input v-model="ruleForm.numrooms"
                     placeholder="请输入房间数"
-                    maxlength="11" />
+                    maxlength="11"
+          />
         </el-form-item>
 
         <div class="subBox address">
@@ -35,12 +42,14 @@
           </el-button>
           <el-button type="primary"
                      :class="{ continue: actionType === 'add' }"
-                     @click="submitForm('ruleForm', false)">
+                     @click="submitForm('ruleForm', false)"
+          >
             保存
           </el-button>
           <el-button v-if="actionType == 'add'"
                      type="primary"
-                     @click="submitForm('ruleForm', true)">
+                     @click="submitForm('ruleForm', true)"
+          >
             保存并继续添加
           </el-button>
           <!-- </el-form-item> -->

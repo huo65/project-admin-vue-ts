@@ -1,27 +1,27 @@
 <template>
   <div>
-<!--    <div class="logo">-->
-<!--&lt;!&ndash;      管理端&ndash;&gt;-->
-<!--      &lt;!&ndash; <img-->
-<!--        src="./../../../assets/logo.png"-->
-<!--        width="122.5"-->
-<!--        alt=""-->
-<!--      > &ndash;&gt;-->
-<!--      &lt;!&ndash; <img-->
-<!--        src="@/assets/login/login-logo.png"-->
-<!--        alt=""-->
-<!--        style="width: 120px; height: 31px"-->
-<!--      /> &ndash;&gt;-->
-<!--&lt;!&ndash;      <div v-if="!isCollapse"&ndash;&gt;-->
-<!--&lt;!&ndash;           class="sidebar-logo">&ndash;&gt;-->
-<!--&lt;!&ndash;        <img src="@/assets/login/logo.png"&ndash;&gt;-->
-<!--&lt;!&ndash;             style="width: 120px; height: 31px">&ndash;&gt;-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div v-else&ndash;&gt;-->
-<!--&lt;!&ndash;           class="sidebar-logo-mini">&ndash;&gt;-->
-<!--&lt;!&ndash;        <img src="@/assets/login/mini-logo.png">&ndash;&gt;-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--    </div>-->
+    <!--    <div class="logo">-->
+    <!--&lt;!&ndash;      管理端&ndash;&gt;-->
+    <!--      &lt;!&ndash; <img-->
+    <!--        src="./../../../assets/logo.png"-->
+    <!--        width="122.5"-->
+    <!--        alt=""-->
+    <!--      > &ndash;&gt;-->
+    <!--      &lt;!&ndash; <img-->
+    <!--        src="@/assets/login/login-logo.png"-->
+    <!--        alt=""-->
+    <!--        style="width: 120px; height: 31px"-->
+    <!--      /> &ndash;&gt;-->
+    <!--&lt;!&ndash;      <div v-if="!isCollapse"&ndash;&gt;-->
+    <!--&lt;!&ndash;           class="sidebar-logo">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <img src="@/assets/login/logo.png"&ndash;&gt;-->
+    <!--&lt;!&ndash;             style="width: 120px; height: 31px">&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <div v-else&ndash;&gt;-->
+    <!--&lt;!&ndash;           class="sidebar-logo-mini">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <img src="@/assets/login/mini-logo.png">&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--    </div>-->
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu :default-openeds="defOpen"
                :default-active="defAct"
@@ -31,12 +31,14 @@
                :active-text-color="variables.menuActiveText"
                :unique-opened="false"
                :collapse-transition="false"
-               mode="vertical">
+               mode="vertical"
+      >
         <sidebar-item v-for="route in routes"
                       :key="route.path"
                       :item="route"
                       :base-path="route.path"
-                      :is-collapse="isCollapse" />
+                      :is-collapse="isCollapse"
+        />
         <!-- <div class="sub-menu">
           <div class="avatarName">
             {{ name }}

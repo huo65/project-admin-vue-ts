@@ -4,7 +4,6 @@
       <div class="tableBar"
            style="display: inline-block; width: 100%"
       >
-
         <label style="margin-right: 5px; margin-left: 20px">预约类型：</label>
         <el-select v-model="reservationsType"
                    placeholder="请选择"
@@ -39,9 +38,9 @@
         />
         <el-table-column prop="resvtype" label="预约类型">
           <template slot-scope="scope">
-    <span>
-      {{ scope.row.resvtype === 1 ? '航班' : scope.row.resvtype === 2 ? '大巴' : scope.row.resvtype === 3 ? '酒店' : '' }}
-    </span>
+            <span>
+              {{ scope.row.resvtype === 1 ? '航班' : scope.row.resvtype === 2 ? '大巴' : scope.row.resvtype === 3 ? '酒店' : '' }}
+            </span>
           </template>
         </el-table-column><
 
@@ -50,7 +49,6 @@
                          align="center"
         >
           <template slot-scope="scope">
-
             <el-button type="text"
                        size="small"
                        class="delBut"
@@ -74,7 +72,6 @@
                      @current-change="handleCurrentChange"
       />
     </div>
-
   </div>
 </template>
 
@@ -150,10 +147,9 @@ export default class extends Vue {
       })
   }
 
-
   //删除
   private deleteHandle(id: any) {
-    this.$confirm('此操作将永久删除该分类，是否继续？', '确定删除', {
+    this.$confirm('此操作将永久删除该预约，是否继续？', '确定删除', {
       confirmButtonText: '删除',
       cancelButtonText: '取消',
       type: 'warning'
@@ -176,7 +172,6 @@ export default class extends Vue {
   $refs!: {
     classData: any
   }
-
 
   //分页
   private handleSizeChange(val: any) {

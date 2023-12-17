@@ -11,9 +11,9 @@
         </el-button>
       </div>
       <el-table
+        v-if="tableData.length"
         :data="tableData"
         stripe
-        v-if="tableData.length"
         class="tableBox"
       >
         <el-table-column prop="location" label="位置" />
@@ -23,7 +23,8 @@
 
         <el-table-column label="操作"
                          width="250"
-                         align="center">
+                         align="center"
+        >
           <template slot-scope="scope">
             <el-button type="text"
                        size="small"
@@ -35,15 +36,13 @@
             <el-button type="text"
                        size="small"
                        class="delBut"
-                       @click="deleteHandle('单删', scope.row.location)">
+                       @click="deleteHandle('单删', scope.row.location)"
+            >
               删除
             </el-button>
-
           </template>
         </el-table-column>
-
       </el-table>
-
 
       <Empty v-else :is-search="isSearch" />
       <el-pagination
@@ -55,7 +54,6 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
       />
-
     </div>
   </div>
 </template>

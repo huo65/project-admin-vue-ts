@@ -11,8 +11,8 @@
         </el-button>
       </div>
       <el-table
-        :data="tableData"
-        stripezz        v-if="tableData.length"
+        v-if="tableData.length"
+        :data="tableData" stripezz
         class="tableBox"
       >
         <el-table-column prop="flightnum" label="航班号" />
@@ -24,7 +24,8 @@
 
         <el-table-column label="操作"
                          width="250"
-                         align="center">
+                         align="center"
+        >
           <template slot-scope="scope">
             <el-button type="text"
                        size="small"
@@ -36,13 +37,12 @@
             <el-button type="text"
                        size="small"
                        class="delBut"
-                       @click="deleteHandle('单删', scope.row.flightnum)">
+                       @click="deleteHandle('单删', scope.row.flightnum)"
+            >
               删除
             </el-button>
-
           </template>
         </el-table-column>
-
       </el-table>
 
       <Empty v-else :is-search="isSearch" />
@@ -55,7 +55,6 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
       />
-
     </div>
   </div>
 </template>

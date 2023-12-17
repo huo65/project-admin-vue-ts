@@ -1,5 +1,7 @@
 <template>
-  <div class="huo"> <h1 class="title">欢迎来到去这儿旅行</h1> </div>
+  <div class="huo"> <h1 class="title">去这儿旅行管理端</h1>
+  </div>
+
 </template>
 
 <script lang="ts">

@@ -67,7 +67,6 @@ import { UserModule } from '@/store/modules/user'
 import InputAutoComplete from '@/components/InputAutoComplete/index.vue'
 import Empty from '@/components/Empty/index.vue'
 import { deleteBus, getBusList } from '@/api/bus'
-import { deleteDish } from '@/api/dish'
 
 @Component({
   name: 'Bus',

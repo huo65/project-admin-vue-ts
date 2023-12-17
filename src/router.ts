@@ -29,20 +29,11 @@ const router = new Router({
             import(/* webpackChunkName: "dashboard" */ "@/views/dashboard/index.vue"),
           name: "Dashboard",
           meta: {
-            title: "工作台",
+            title: "管理端",
             icon: "dashboard",
             affix: true
           }
         },
-		// {
-    //       path: "/statistics",
-    //       component: () =>
-    //         import(/* webpackChunkName: "shopTable" */ "@/views/statistics/index.vue"),
-    //       meta: {
-    //         title: "数据统计",
-    //         icon: "icon-statistics"
-    //       }
-    //     },
         {
           path: "bus",
           component: () =>
@@ -103,7 +94,7 @@ const router = new Router({
             import(/* webpackChunkName: "shopTable" */ "@/views/customers/index.vue"),
           meta: {
             title: "用户管理",
-            icon: "icon-employee"
+            icon: ""
           }
         },
         {
@@ -114,7 +105,19 @@ const router = new Router({
             title: "添加用户",
             hidden: true
           }
-        }
+        },
+        // 用户端
+        {
+          path: "user",
+          component: () =>
+            import(/* webpackChunkName: "dashboard" */ "@/views/user/index.vue"),
+          name: "user",
+          meta: {
+            title: "用户端",
+            icon: "icon-employee",
+            affix: true
+          }
+        },
 
       ]
     },

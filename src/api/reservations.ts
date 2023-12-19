@@ -23,6 +23,21 @@ export const deleReservations = (ids: string) => {
   });
 };
 
+export const checkRoute = (params: any) => {
+  return request({
+    url: '/reservations/checkUserRoute',
+    method: 'get',
+    params
+  });
+};
+export const check = (params: any) => {
+  return request({
+    url: '/reservations/checkComplete',
+    method: 'get',
+    params
+  });
+};
+
 // 修改接口
 export const editReservations = (params: any) => {
   return request({

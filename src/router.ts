@@ -164,8 +164,19 @@ const router = new Router({
             icon: ''
           }
         },
+        {
+          path: 'test',
+          component: () =>
+            import(/* webpackChunkName: "shopTable" */ '@/views/test/index.vue'),
+          meta: {
+            title: '个人路线',
+            icon: ''
+          }
+        },
+
       ]
     },
+
     {
       path: '*',
       redirect: '/404',

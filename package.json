@@ -13,6 +13,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@antv/g6": "^4.8.24",
     "@types/echarts": "^4.4.6",
     "@types/webpack": "^4.41.12",
     "area-data": "^5.0.6",
